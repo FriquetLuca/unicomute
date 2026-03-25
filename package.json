@@ -1,20 +1,20 @@
 {
-  "name": "TEMPLATE_NAME",
+  "name": "unicomute",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "description": "TEMPLATE_DESCRIPTION",
+  "description": "A real-time UTF-8 to Binary, Hex, and String Literal encoder built with React and TypeScript.",
   "license": "MIT",
-  "author": "TEMPLATE_OWNER",
+  "author": "FriquetLuca",
   "keywords": [],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TEMPLATE_OWNER/TEMPLATE_NAME.git"
+    "url": "git+https://github.com/FriquetLuca/unicomute.git"
   },
   "bugs": {
-    "url": "https://github.com/TEMPLATE_OWNER/TEMPLATE_NAME/issues"
+    "url": "https://github.com/FriquetLuca/unicomute/issues"
   },
-  "homepage": "https://github.com/TEMPLATE_OWNER/TEMPLATE_NAME#readme",
+  "homepage": "https://github.com/FriquetLuca/unicomute#readme",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
