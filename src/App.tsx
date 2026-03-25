@@ -5,6 +5,7 @@ import { encodeString } from './utils/encodeString';
 import { sanitizeString } from './utils/sanitizeString';
 import SwapDivider from './components/SwapDivider';
 import TextSelectorContainer from './components/TextSelectorContainer';
+import Header from './components/Header';
 
 export default function App() {
   const [sourceFormat, setSourceFormat] = useState<Format>('utf-8');
@@ -38,17 +39,10 @@ export default function App() {
   return (
     <div className="min-h-screen bg-slate-50 p-8 font-sans text-slate-900">
       <div className="max-w-6xl mx-auto">
-        {/* Header */}
-        <header className="mb-8 flex justify-between items-end">
-          <div>
-            <h1 className="text-3xl font-bold tracking-tight text-indigo-600">
-              Unicomute
-            </h1>
-            <p className="text-slate-500">
-              The minimalist text-to-byte inspector.
-            </p>
-          </div>
-        </header>
+        <Header
+          title={'Unicomute'}
+          description={'The minimalist text-to-byte inspector.'}
+        />
 
         <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4 items-center">
           <TextSelectorContainer<Format>
