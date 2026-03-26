@@ -31,7 +31,7 @@ export default function Select<T extends string>({
       {options.map((item, index) => {
         if ('options' in item) {
           return (
-            <optgroup label={item.label} key={`group-${index}`}>
+            <optgroup label={t(item.label)} key={`group-${index}`}>
               {item.options.map((opt, optIndex) => (
                 <option key={`opt-${index}-${optIndex}`} value={opt.value}>
                   {t(opt.label)}
