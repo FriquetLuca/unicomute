@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
 
 interface HeaderProps {
@@ -6,13 +7,14 @@ interface HeaderProps {
 }
 
 export default function Header({ title, description }: HeaderProps) {
+  const { t } = useTranslation();
   return (
     <header className="mb-8 flex justify-between items-end">
       <div>
         <h1 className="text-3xl font-bold tracking-tight text-indigo-600">
-          {title}
+          {t(title)}
         </h1>
-        <p className="text-slate-500">{description}</p>
+        <p className="text-slate-500">{t(description)}</p>
       </div>
       <LanguageSwitcher />
     </header>

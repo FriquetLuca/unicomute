@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 export interface SelectOption {
   label: string;
   value?: string | number | readonly string[] | undefined;
@@ -19,6 +21,7 @@ export default function Select<T extends string>({
   onChange,
   options,
 }: SelectProps<T>) {
+  const { t } = useTranslation();
   return (
     <select
       value={value}
@@ -31,7 +34,7 @@ export default function Select<T extends string>({
             <optgroup label={item.label} key={`group-${index}`}>
               {item.options.map((opt, optIndex) => (
                 <option key={`opt-${index}-${optIndex}`} value={opt.value}>
-                  {opt.label}
+                  {t(opt.label)}
                 </option>
               ))}
             </optgroup>
@@ -39,7 +42,7 @@ export default function Select<T extends string>({
         }
         return (
           <option key={`opt-${index}`} value={item.value}>
-            {item.label}
+            {t(item.label)}
           </option>
         );
       })}

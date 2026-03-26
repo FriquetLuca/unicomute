@@ -15,73 +15,73 @@ export type Format =
 
 export const encodingOptions = [
   {
-    label: 'Text Encodings',
+    label: 'encoding_options.text_encoding.title',
     options: [
       {
-        label: 'UTF-8 (Standard)',
+        label: 'encoding_options.text_encoding.utf8',
         value: 'utf-8',
       },
       {
-        label: 'UTF-16 (Wide)',
+        label: 'encoding_options.text_encoding.utf16',
         value: 'utf-16',
       },
     ],
   },
   {
-    label: 'Web / API',
+    label: 'encoding_options.web_api.title',
     options: [
       {
-        label: 'Base64(Standard)',
+        label: 'encoding_options.web_api.base64',
         value: 'base64',
       },
       {
-        label: 'Base64URL (JWT Safe)',
+        label: 'encoding_options.web_api.base64url',
         value: 'base64url',
       },
       {
-        label: 'URL Encoded',
+        label: 'encoding_options.web_api.url',
         value: 'url',
       },
       {
-        label: 'HTML Entities',
+        label: 'encoding_options.web_api.html',
         value: 'html',
       },
       {
-        label: 'JWT Payload (JSON)',
+        label: 'encoding_options.web_api.jwt',
         value: 'jwt',
       },
       {
-        label: 'URL Slug',
+        label: 'encoding_options.web_api.slug',
         value: 'slug',
       },
     ],
   },
   {
-    label: 'Programming',
+    label: 'encoding_options.programming.title',
     options: [
       {
-        label: 'Escape Sequence (\n)',
+        label: 'encoding_options.programming.escape',
         value: 'escape',
       },
       {
-        label: 'String Literal (\\xHH)',
+        label: 'encoding_options.programming.literal',
         value: 'literal',
       },
     ],
   },
   {
-    label: 'Low Level',
+    label: 'encoding_options.low_level.title',
     options: [
       {
-        label: 'Hexadecimal',
+        label: 'encoding_options.low_level.hex',
         value: 'hex',
       },
       {
-        label: 'Binary',
+        label: 'encoding_options.low_level.bin',
         value: 'binary',
       },
       {
-        label: 'Decimal (Integer Array)',
+        label: 'encoding_options.low_level.dec',
         value: 'decimal',
       },
     ],

@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import type { SelectOption, SelectOptionGroup } from './Select';
 import Select from './Select';
 
@@ -16,11 +17,12 @@ export default function TextSelectorContainer<T extends string>({
   options,
   children,
 }: TextContainerProps<T>) {
+  const { t } = useTranslation();
   return (
     <div className="flex flex-col gap-2">
       <div className="flex items-center justify-between px-1">
         <label className="text-sm font-semibold uppercase tracking-wider text-slate-400">
-          {label}
+          {t(label)}
         </label>
         <Select<T> value={value} onChange={onChange} options={options} />
       </div>
