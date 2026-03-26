@@ -1,3 +1,5 @@
+import LanguageSwitcher from './LanguageSwitcher';
+
 interface HeaderProps {
   title: string;
   description: string;
@@ -12,6 +14,7 @@ export default function Header({ title, description }: HeaderProps) {
         </h1>
         <p className="text-slate-500">{description}</p>
       </div>
+      <LanguageSwitcher />
     </header>
   );
 }

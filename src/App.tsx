@@ -1,8 +1,12 @@
 //import { useTranslation } from 'react-i18next';
 import { useState, useMemo } from 'react';
-import { decodeString, type Format } from './utils';
-import { encodeString } from './utils/encodeString';
-import { sanitizeString } from './utils/sanitizeString';
+import {
+  decodeString,
+  encodeString,
+  encodingOptions,
+  sanitizeString,
+  type Format,
+} from './utils';
 import SwapDivider from './components/SwapDivider';
 import TextSelectorContainer from './components/TextSelectorContainer';
 import Header from './components/Header';
@@ -41,82 +45,15 @@ export default function App() {
       <div className="max-w-6xl mx-auto">
         <Header
           title={'Unicomute'}
-          description={'The minimalist text-to-byte inspector.'}
+          description={'A real-time string encoder.'}
         />
-
         <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4 items-center">
           <TextSelectorContainer<Format>
             label={'Source'}
-            options={[
-              {
-                label: 'Text Encodings',
-                options: [
-                  {
-                    label: 'UTF-8 (Standard)',
-                    value: 'utf-8',
-                  },
-                  {
-                    label: 'UTF-16 (Wide)',
-                    value: 'utf-16',
-                  },
-                ],
-              },
-              {
-                label: 'Web / API',
-                options: [
-                  {
-                    label: 'Base64(Standard)',
-                    value: 'base64',
-                  },
-                  {
-                    label: 'Base64URL (JWT Safe)',
-                    value: 'base64url',
-                  },
-                  {
-                    label: 'URL Encoded',
-                    value: 'url',
-                  },
-                  {
-                    label: 'HTML Entities',
-                    value: 'html',
-                  },
-                  {
-                    label: 'JWT Payload (JSON)',
-                    value: 'jwt',
-                  },
-                ],
-              },
-              {
-                label: 'Programming',
-                options: [
-                  {
-                    label: 'Escape Sequence (\n)',
-                    value: 'escape',
-                  },
-                  {
-                    label: 'String Literal (\\xHH)',
-                    value: 'literal',
-                  },
-                ],
-              },
-              {
-                label: 'Low Level',
-                options: [
-                  {
-                    label: 'Hexadecimal',
-                    value: 'hex',
-                  },
-                  {
-                    label: 'Binary',
-                    value: 'binary',
-                  },
-                  {
-                    label: 'Decimal (Integer Array)',
-                    value: 'decimal',
-                  },
-                ],
-              },
-            ]}
+            options={encodingOptions.map((o) => ({
+              ...o,
+              options: o.options.filter((opt) => opt.value !== 'slug'),
+            }))}
             value={sourceFormat}
             onChange={setSourceFormat}
           >
@@ -130,76 +67,10 @@ export default function App() {
           <SwapDivider {...{ swapFormats }} />
           <TextSelectorContainer<Format>
             label={'Target'}
-            options={[
-              {
-                label: 'Text Encodings',
-                options: [
-                  {
-                    label: 'UTF-8 (Standard)',
-                    value: 'utf-8',
-                  },
-                  {
-                    label: 'UTF-16 (Wide)',
-                    value: 'utf-16',
-                  },
-                ],
-              },
-              {
-                label: 'Web / API',
-                options: [
-                  {
-                    label: 'Base64(Standard)',
-                    value: 'base64',
-                  },
-                  {
-                    label: 'Base64URL (JWT Safe)',
-                    value: 'base64url',
-                  },
-                  {
-                    label: 'URL Encoded',
-                    value: 'url',
-                  },
-                  {
-                    label: 'HTML Entities',
-                    value: 'html',
-                  },
-                  {
-                    label: 'URL Slug',
-                    value: 'slug',
-                  },
-                ],
-              },
-              {
-                label: 'Programming',
-                options: [
-                  {
-                    label: 'Escape Sequence (\n)',
-                    value: 'escape',
-                  },
-                  {
-                    label: 'String Literal (\\xHH)',
-                    value: 'literal',
-                  },
-                ],
-              },
-              {
-                label: 'Low Level',
-                options: [
-                  {
-                    label: 'Hexadecimal',
-                    value: 'hex',
-                  },
-                  {
-                    label: 'Binary',
-                    value: 'binary',
-                  },
-                  {
-                    label: 'Decimal (Integer Array)',
-                    value: 'decimal',
-                  },
-                ],
-              },
-            ]}
+            options={encodingOptions.map((o) => ({
+              ...o,
+              options: o.options.filter((opt) => opt.value !== 'jwt'),
+            }))}
             value={targetFormat}
             onChange={setTargetFormat}
           >
