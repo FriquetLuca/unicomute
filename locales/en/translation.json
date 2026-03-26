@@ -1,3 +1,46 @@
 {
-  "hello": "Hello World!"
+  "app": {
+    "header": {
+      "title": "Unicomute",
+      "description": "A real-time string encoder."
+    },
+    "format": {
+      "source": "Source",
+      "source_placeholder": "Enter content here...",
+      "target": "Target",
+      "target_placeholder": "Waiting for input..."
+    }
+  },
+  "languages": {
+    "language": "Language:",
+    "english": "English",
+    "french": "French"
+  },
+  "encoding_options": {
+    "text_encoding": {
+      "title": "Text Encodings",
+      "utf8": "UTF-8 (Standard)",
+      "utf16": "UTF-16 (Wide)"
+    },
+    "web_api": {
+      "title": "Web / API",
+      "base64": "Base64 (Standard)",
+      "base64url": "Base64URL (JWT Safe)",
+      "url": "URL Encoded",
+      "html": "HTML Entities",
+      "jwt": "JWT Payload (JSON)",
+      "slug": "URL Slug"
+    },
+    "programming": {
+      "title": "Programming",
+      "escape": "Escape Sequence (\n)",
+      "literal": "String Literal (\\xHH)"
+    },
+    "low_level": {
+      "title": "Low Level",
+      "hex": "Hexadecimal",
+      "bin": "Binary",
+      "dec": "Decimal (Integer Array)"
+    }
+  }
 }

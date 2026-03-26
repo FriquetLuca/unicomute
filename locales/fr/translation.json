@@ -1,0 +1,46 @@
+{
+  "app": {
+    "header": {
+      "title": "Unicomute",
+      "description": "Un encodeur de chaînes de caractères en temps réel."
+    },
+    "format": {
+      "source": "Source",
+      "source_placeholder": "Entrez le contenu ici...",
+      "target": "Cible",
+      "target_placeholder": "En attente d'entrée..."
+    }
+  },
+  "languages": {
+    "language": "Langue :",
+    "english": "Anglais",
+    "french": "Français"
+  },
+  "encoding_options": {
+    "text_encoding": {
+      "title": "Encodages Texte",
+      "utf8": "UTF-8 (Standard)",
+      "utf16": "UTF-16 (Large)"
+    },
+    "web_api": {
+      "title": "Web / API",
+      "base64": "Base64 (Standard)",
+      "base64url": "Base64URL (Sécurisé JWT)",
+      "url": "Encodage URL",
+      "html": "Entités HTML",
+      "jwt": "Charge utile JWT (JSON)",
+      "slug": "Slug URL"
+    },
+    "programming": {
+      "title": "Programmation",
+      "escape": "Séquence d'échappement (\\n)",
+      "literal": "Littéral de chaîne (\\xHH)"
+    },
+    "low_level": {
+      "title": "Bas Niveau",
+      "hex": "Hexadécimal",
+      "bin": "Binaire",
+      "dec": "Décimal (Tableau d'entiers)"
+    }
+  }
+}
